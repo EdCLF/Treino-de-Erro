@@ -1,7 +1,7 @@
 #Sistema de controle de mecanica
 
 servicos= {'servico':'lataria'}
-veiculo={'veiculo':'ford k'}
+veiculos={'veiculo':'ford k'}
 dono={'nome':'joao'}
 chave =0
 
@@ -13,7 +13,7 @@ while True:
                 veiculo = input("digite o veiculo: ")
                 servico = input("digite o servico: ")
                 dono[f'{'nome'+str(chave+1)}']=[nome]
-                veiculo[f'{'veiculo'+str(chave+1)}']=[veiculo]
+                veiculos[f'{'veiculo'+str(chave+1)}']=[veiculo]
                 servicos[f'{'servico' + str(chave + 1)}'] = [servico]
                 para = input('deseja registrar mais algum carro (s/n): ')
                 if para == "n":
@@ -21,7 +21,9 @@ while True:
                 else:
                     continue
         def listar_veiculos():
-            print(veiculo)
+            print(veiculos)
+        def listar_servicos():
+            print(servicos)
     except TypeError:
         print("Erro de tipo de dados")
     except ValueError:
@@ -30,4 +32,5 @@ while True:
         print('ola')
         registra_veiculo()
         listar_veiculos()
+        listar_servicos()
         break
