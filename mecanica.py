@@ -1,6 +1,8 @@
 #Sistema de controle de mecanica
 
-contagem= {'nome':'joao','veiculo':'ford k','servico':'lataria'}
+servicos= {'servico':'lataria'}
+veiculo={'veiculo':'ford k'}
+dono={'nome':'joao'}
 chave =0
 
 while True:
@@ -10,16 +12,16 @@ while True:
                 nome = input("digite o nome do proprietario: ")
                 veiculo = input("digite o veiculo: ")
                 servico = input("digite o servico: ")
-                contagem[f'{'nome'+str(chave+1)}']=[nome]
-                contagem[f'{'veiculo'+str(chave+1)}']=[veiculo]
-                contagem[f'{'servico' + str(chave + 1)}'] = [servico]
+                dono[f'{'nome'+str(chave+1)}']=[nome]
+                veiculo[f'{'veiculo'+str(chave+1)}']=[veiculo]
+                servicos[f'{'servico' + str(chave + 1)}'] = [servico]
                 para = input('deseja registrar mais algum carro (s/n): ')
                 if para == "n":
                     break
                 else:
                     continue
         def listar_veiculos():
-            print(contagem)
+            print(veiculo)
     except TypeError:
         print("Erro de tipo de dados")
     except ValueError:
